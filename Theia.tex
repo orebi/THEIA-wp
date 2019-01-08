@@ -33,8 +33,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{amssymb,amsmath}
 \usepackage{graphicx, amsthm}
+\usepackage{booktabs}
+  \usepackage{isotope}
 
-  
   \newcommand{\bvec}[1]{\mathbf{#1}}
   
 %\linenumbers
@@ -48,30 +49,7 @@
 
 \maketitle
 
-\section*{Executive Summary}
-
-\newpage
-
-\tableofcontents
-\setcounter{tocdepth}{5}
-\newpage
-
-\section{Introduction and THEIA Overview - GDOG, Bob, JRK, Michi}
-
-Standard intro
-
-
-\subsection{Detector configuration}
-Include TWO baseline designs -- ideal and ``realistic'' (existing cavern)
-
-Include description of phased deployment
-e.g. refer to THEIA-i, THEIA-ii, THEIA-iii
-
-Define the baseline design for each here, so that physics sections can simply refer back
-
-e.g. THEIA-ii might be 50ktonne 10\% WbLS, 90\% coverage
-
-whereas THEIA-iii might be the above with 5\% WbLS but a bag containing LS + Te/Xe
+\input{i-intro}
 
 \section{Technology Developments}
 \input{i-wbls}
@@ -81,21 +59,18 @@ whereas THEIA-iii might be the above with 5\% WbLS but a bag containing LS + Te/
 
 \section{Physics Sensitivities and Detector Requirements}\label{s:physics}
 
-\subsection{High-Energy Physics}
-\subsubsection{Detector Simulation - \bf volunteers?}
-Summary of simulation used in following sections, including e.g. high energy physics list, specific parameters for each detector configuration.
+\textsc{Theia} would address a broad program of physics, including: geo-neutrinos, supernova neutrinos, 
+nucleon decay, measurement of the neutrino mass hierarchy and CP violating phase, 
+and even a next-generation NLDBD search.   
+
+
+%\subsection{High-Energy Physics}
+%\subsubsection{Detector Simulation - \bf volunteers?}
+%Summary of simulation used in following sections, including e.g. high energy physics list, specific parameters for each detector configuration.
 
 \input{i-LBL}
 
-\subsubsection{Nucleon Decay - \bf volunteers?}
-\paragraph{Motivation}
-BRIEF intro to physics motivation, and status of the field: our major competitors
-\paragraph{XX with THEIA}
-What we bring to the table - pros of THEIA design \newline
-Sensitivity estimates with baseline design (one of THEIA i--iii)
-\paragraph{Detector Requirements}
-A summary of the impact of different detector choices i.e. what happens if we stray from the relevant baseline
-\subsubsection{Atmospheric Neutrinos - \bf volunteers?}
+\subsection{Nucleon Decay - \bf volunteers?}
 \paragraph{Motivation}
 BRIEF intro to physics motivation, and status of the field: our major competitors
 \paragraph{XX with THEIA}
@@ -104,14 +79,23 @@ Sensitivity estimates with baseline design (one of THEIA i--iii)
 \paragraph{Detector Requirements}
 A summary of the impact of different detector choices i.e. what happens if we stray from the relevant baseline
 
-\subsection{Low-Energy Physics}
-\subsubsection{Detector Simulation - \bf volunteers?}
-Summary of simulation used in following sections, including e.g. high energy physics list, specific parameters for each detector configuration.
+\subsection{Atmospheric Neutrinos - \bf volunteers?}
+\paragraph{Motivation}
+BRIEF intro to physics motivation, and status of the field: our major competitors
+\paragraph{XX with THEIA}
+What we bring to the table - pros of THEIA design \newline
+Sensitivity estimates with baseline design (one of THEIA i--iii)
+\paragraph{Detector Requirements}
+A summary of the impact of different detector choices i.e. what happens if we stray from the relevant baseline
+
+%\subsection{Low-Energy Physics}
+%\subsubsection{Detector Simulation - \bf volunteers?}
+%Summary of simulation used in following sections, including e.g. high energy physics list, specific parameters for each detector configuration.
 
 \input{i-DBD}
 \input{i-geo}
 
-\subsubsection{Sterile Neutrinos - \bf volunteers?}
+\subsection{Sterile Neutrinos - \bf volunteers?}
 \paragraph{Motivation}
 BRIEF intro to physics motivation, and status of the field: our major competitors
 \paragraph{XX with THEIA}
@@ -121,24 +105,24 @@ Sensitivity estimates with baseline design (one of THEIA i--iii)
 A summary of the impact of different detector choices i.e. what happens if we stray from the relevant baseline
 
 
-\subsection{Astrophysical Sources}
-\subsubsection{Detector Simulation}
-Summary of simulation used in following sections, including e.g. high energy physics list, specific parameters for each detector configuration.
+%\subsection{Astrophysical Sources}
+%\subsubsection{Detector Simulation}
+%Summary of simulation used in following sections, including e.g. high energy physics list, specific parameters for each detector configuration.
 
 \input{i-solar}
 
 \input{i-sn}
 \input{i-dsnb}
 
-\subsubsection{Indirect Dark Matter ?? }
+\subsection{Indirect Dark Matter ?? }
 From Michi -- there is still some interest in detecting decay/annihilation neutrinos in the multi-MeV range where THEIA would probably be able to place very competitive limits (as I noticed speaking to a theorist from Brussels a few weeks ago). It would be an addition to the antineutrino WG. Certainly, it?s rather low priority, but we could put it there as a place-holder.
-\paragraph{Motivation}
-BRIEF intro to physics motivation, and status of the field: our major competitors
-\paragraph{XX with THEIA}
-What we bring to the table - pros of THEIA design \newline
-Sensitivity estimates with baseline design (one of THEIA i--iii)
-\paragraph{Detector Requirements}
-A summary of the impact of different detector choices i.e. what happens if we stray from the relevant baseline
+%\paragraph{Motivation}
+%BRIEF intro to physics motivation, and status of the field: our major competitors
+%\paragraph{XX with THEIA}
+%What we bring to the table - pros of THEIA design \newline
+%Sensitivity estimates with baseline design (one of THEIA i--iii)
+%\paragraph{Detector Requirements}
+%A summary of the impact of different detector choices i.e. what happens if we stray from the relevant baseline
 
 
 
@@ -164,11 +148,76 @@ A summary of the impact of different detector choices i.e. what happens if we st
 
 \section{Conclusions}
 
+\textsc{Theia} offers a broad program of compelling science, covering topics in nuclear physics, high-energy physics, astrophysics, and geophysics.  These include: solar neutrinos and neutrinoless double beta decay; proton decay and long-baseline physics; supernova neutrinos and DSNB;  and geoneutrinos, respectively.
+
+Use of the novel, potentially inexpensive WbLS target  allows construction of a precision detector on a massive scale.  
+Successful identification of Cherenkov light in a scintillating detector would result in unprecedented background-rejection capability and signal detection efficiency via directionality and sub-Cherenkov threshold particle identification.  This low-threshold, directional detector could achieve a fantastically broad physics program, combining conventional neutrino physics with rare-event searches in a single, large-scale detector.
+The flexibility of the WbLS target, of the options for isotope loading, and even of the detector configuration is a crucial aspect of \textsc{Theia}'s design.  As the field evolves, \textsc{Theia} has the unique ability to adapt to new directions in the scientific program, making it a powerful instrument of discovery that could transform the next-generation of experiments.  
+
+The feasibility of a low energy solar neutrino measurement with a large WbLS detector depends on the backgrounds and angular resolution achievable. At currently measured levels, the limiting background appears to be \isotope[40]{K} in water.  Remaining backgrounds in water have little effect if they are kept to 1000 to 10000 times the level achieved in scintillator. The \isotope[11]{C} background has a small effect, which suggests that the overburden does not matter for this measurement. The impact of changes in scintillator and PMT coverage on energy resolution have relatively small effects,  suggesting that even at 0.5\% scintillator fraction, energy resolution is no longer the critical parameter to optimize. Instead, the impact of these changes on threshold and angular resolution will be the deciding factor.  With a baseline detector of 50-kT total volume (50\% fiducial), 90\% PMT coverage and a 5\% WbLS target, assuming  a $25^\circ$ angular resolution, a precision of several percent is possible for both CNO and pep neutrino fluxes.
+
+Further studies hinge on additional R\&D, including the Cherenkov detection efficiency enhancement provided by deployment of fast photon sensors, and demonstration of quenching and particle ID capabilities in WbLS.  Development of a directional reconstruction algorithm would allow a direct demonstration of the required angular resolution discussed in this article.  An exciting avenue for further exploration would be isotope loading of the WbLS target, which would allow sensitivity to the low-energy spectral shape.
+
+
 \begin{thebibliography}{00}
 
 \bibitem{wbls}M. Yeh {\it et al.}, { ``A New Water-based Liquid Scintillator and Potential Applications.''} 
 Nucl. Inst. \& Meth. A{\bf 660} 51 (2011).
 
+%DBD
+
+\bibitem{bxo16} N. Rossi, Neutrino 2016 Conference, London, 3---10 July 2016, \url{http://neutrino2016.iopconfs.org/IOP/media/uploaded/EVIOP/event_948/14.00__1_.pdf}
+\bibitem{mei09} D. M. Mei et al., Astropart. Phys. 31, 417–420 (2009).
+\bibitem{baudis15} L. Baudis et al., Eur. Phys. J. C 75, 485 (2015).
+\bibitem{zhang16} C. Zhang et al., Astropart. Phys. 84, 62--69 (2016).
+\bibitem{norm05} E. B. Norman et al., Nucl. Phys. B (Proc. Suppl.) 143, 508 (2005).
+\bibitem{bard97} D.W. Bardayan et al., Phys. Rev. C 55, 820 (1997).
+\bibitem{wang15} B.S. Wang et al., Phys. Rev. C 92, 024620 (2015).
+\bibitem{lozza15}  V. Lozza and J. Petzoldt, Astropart. Phys. 61, 62--71 (2015).
+\bibitem{snop16} S. Andringa et al., Advances in High Energy Physics 2016, 6194250 (2016).
+\bibitem{galb05} C. Galbiati, A. Pocar, D. Franco, A. Ianni, L. Cadonati, S. Schoenert, Phys.Rev. C 71 055805 (2005).
+\bibitem{gando16} Y Gando, Nuclear and Particle Physics Proceedings, vol. 273- 275, pp. 1842-1846 (2016).
+\bibitem{hagn00} T. Hagner et al., Astro. Phys. 14, 33--47, (2000).
+\bibitem{mei06} D. M. Mei and A. Hime, Phys. Rev. D 73, 053004 (2006).
+\bibitem{zbiri10} K. Zbiri, arxiv:0910.3714v3 [hep--ph] (2010).
+\bibitem{bxo2013} Borexino Collaboration, G. Bellini et al., JCAP08 49 (2013).
+\bibitem{SNO_3ph} SNO Collaboration, B. Aharmim et al., Physical Review C 88, 025501 (2013).
+\bibitem{Cuore017} C. Alduino et al., Eur. Phys. J. C 77 (2017).
+\bibitem{exo14}  J.B. Albert et al., Phys. Rev. C 89, 015502 (2014). 
+\bibitem{kam03} KamLAND Collaboration, K. Eguchi et al., Physical Review Letters 90, 021802, (2003).
+\bibitem{bxo09} Borexino Collaboration, C. Arpesella et al., Physical Review Letters 101,091302, (2008).
+\bibitem{gando13} A. Gando et al. Phys. Rev. Lett. 110, 062502 (2013).
+\bibitem{radiopurityorg} \url{https://www.radiopurity.org/rp/rp/_design/persephone/index.html?all}
+\bibitem{kamLAND_Zen} I. Shimizu, Frontiers of liquid Scintillator Technology (FroST16), March 18, 2016
+\url{https://indico.fnal.gov/getFile.py/access?contribId=45&sessionId=25&resId=0&materialId=slides&confId=10355}
+\bibitem{eijiri14} H. Ejiri and S. R. Elliott, Phys. Rev. C 89, 055501, (2014).
+\bibitem{eijiri17} H. Ejiri and S. R. Elliott, Phys. Rev. C 95, 055501 (2017).
+\bibitem{decay0} O.A.Ponkratenko, V.I.Tretyak, Yu.G.Zdesenko, Phys. At. Nucl. 63, 1282   (2000)  (nucl-ex/0104018)
+\bibitem{2012PhRvC..85c4316K} Kotila, J., \& Iachello, F. (2012). Phase-space factors for double-$\beta$ decay. Physical Review C - Nuclear Physics, 85(3), 034316. http://doi.org/10.1103/PhysRevC.85.034316
+\bibitem{Barea:2013wb} Barea, J., Kotila, J., \& Iachello, F. (2013). Nuclear matrix elements for double-$\beta$ decay. Physical Review C - Nuclear Physics, 87(1).
+
 \end{thebibliography}
 
+
+%% BIBLIOGRAPHY
+%%__________________________________________________________________________________________________%
+\addcontentsline{toc}{section}{Bibliography}
+\bibliographystyle{unsrt}
+\bibliography{bib}
+
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
