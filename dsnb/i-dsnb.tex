@@ -1,0 +1,108 @@
+\subsection{Diffuse Supernova Neutrino Background - M Wurm, J Sawatzki}
+
+\paragraph{Motivation}
+
+The Diffuse Supernova Neutrino Background (DSNB) consists of neutrinos emitted by all present and historic core-collapse Supernovae (SNe) throughout the Universe. Red-shifted by cosmic expansion and travelling over vast distances, these neutrinos constitute a faint background flux. Nevertheless, the discovery and subsequent spectroscopy of the DSNB will provide unique information on the redshift-dependent SN rate and the average neutrino spectrum from all types of core-collapse SNe.
+
+The best chance for detection is offered by the Inverse Beta Decays (IBD) on hydrogen induced by the $\bar\nu_e$ component of the DSNB. With an expected event rate of 0.1 per year and kiloton of detector material, overwhelming backgrounds have to be faced. Still, within the likely observation window between 10 and 30\,MeV the faint signal is within reach of current and upcoming large-volume neutrino detectors:
+
+The best limit of 2.9\,cm$^{-2}$s$^{-1}$ (integral $\bar\nu_e$ flux for $E_\nu>17.3$\,MeV)  on the DSNB flux has been obtained by the Super-Kamiokande experiment \cite{Bays:2011si}. Its recent upgrade to a gadolinium-loaded water target (SK-Gd) will greatly enhance its sensitivity, likely to provide it with a first glance of the DSNB. However, the rather limited event rate of 2-3 events per year means that a first evidence of the signal is still many years away. A similar argument can be made for the liquid-scintillator detector JUNO. Coming online in 2021, it will have to collect data for many years to reach a $3\sigma$ significance level \cite{}.
+
+THEIA may play a pivotal role in the discovery and exploration of the DSNB signal. Based on a larger target mass, it will accumulate statistics much faster. Moreover, the dual detection of Cherenkov and scintillation signal offers a background discrimination capability unparalleled by Gd-doped water or pure organic scintillator. Excited nuclei and nuclear fragments created by the NC interactions of atmospheric neutrinos can be efficiently discriminated by the Cherenkov/Scintillation (C/S) ratio, allowing for a low-background DSNB event sample at very high detection efficiency. Measuring background levels precisely in a similar target medium, THEIA will as well help reduce the systematic uncertainties of the SK-Gd and JUNO measurements.
+
+%In both cases, the main challenge: very low signal rate in the presence of considerable backgrounds
+%n water and LS, primary detection channel is the inverse beta decay; neutron tagging capability vastly improves the chances for a positive detection
+%still, on a level fo only 1 event per 10 kt-yrs, even minor background rates become a formidable challenge
+%a convincing discovery therefore must provide both sufficient event statistics and a clear signature for separating DSNB and background events based on the prompt signal
+
+\paragraph{DSNB signal and background levels}
+Given the multitude and distance of Supernovae (SNe) contributing to the overall background flux, the DSNB signal results from a nearly isotropic neutrino flux with a  spectrum averaged for all types of core-collapse SN, substantially red-shifted for Supernovae at far-out distances. The detectable signal above 10 MeV (see below) is thus dominated by SNe out to red-shifts of $z\approx1$. 
+
+For IBD events, the prompt energy of the positron signal translates almost directly to the incident neutrino energy, while the delayed neutron signal provides a fast coincidence tag to reduce the ample single-event backgrounds. Figure \ref{fig:dsnb_spectrum} depicts the visible energy spectrum (scintillation only) for the prompt positrons. The underlying SN model and $z$-dependent Supernova rate we used the reference model of the Garching group \cite{}. The used detector configuration is close to {\it THEIA-ii}: Energy scale and resolution correspond to a photoelectron yield of 120 per MeV of deposited energy, corresponding to 10\,\% organic ratio in the WbLS and a photocoverage of 70\,\%. The flux normalization translates to 0.29 events per kiloton$\cdot$year.
+
+\begin{figure}[htp!]
+\centering
+\includegraphics[width=0.75\textwidth]{dsnb/dsnb_spectrum}
+\caption{The visible scintillation energy spectrum expected for the DSNB signal and its ample backgrounds. The presented spectra include reactor neutrinos, cosmogenic Li-9, fast neutrons as well as atmospheric neutrino CC and NC interaction rates before application of discrimination techniques. The irreducible antineutrino backgrounds limit the observation window to the range of $\sim$8 to 30\,MeV.}
+\label{fig:dsnb_spectrum}
+\end{figure}
+
+As indicated in figure \ref{fig:dsnb_spectrum}, the faint DSNB signal is beset by a variety of backgrounds. The observation window is set by two irreducible $\bar\nu_e$ backgrounds that themselves induce IBDs: {\bf Reactor neutrinos} constitute an overwhelming background for terrestrial detectors and limit the detection in the energy range below $\sim$8 MeV. At higher energies, {\bf CC interactions of atmospheric neutrinos} start to dominate the DNSB rate from $\sim$30\,MeV. These two backgrounds define the observation window for all water and LS detectors.
+
+Within this window, several further backgrounds contribute that are all of cosmogenic origin: 
+\begin{itemize}
+\item {\bf Cosmogenic $\beta n$-emitters} are created by muon spallation on the oxygen (and carbon) nuclei of the target. The only isotope produced at a relevant cross-section and providing a $\beta$-signal of sufficiently high energy to reach into the observation window is $^9$Li. Depending on the depth of the detector, this background can be efficiently suppressed by forming a time-coincidence veto with the parent muon. 
+\item {\bf Fast neutrons} are induced by muons passing the rock surrounding the detector and can in principle enter the detector unnoticed. The combination of a prompt signal created by elastic scattering off protons and the subsequent neutron capture can mimic the IBD signature. Since these events enter the detector from outside, they can be effectively addressed by a fiducial volume cut. Moreover, a cut on the C/S ratio will as well reduce this background contribution.
+\item {\bf NC reactions of atmospheric neutrinos} constitute the most serious background to DSNB detection.  The IBD-mimicking events originate from reactions with a single neutron in the final state, while the prompt signal can be composed from a multitude of different combinations of nuclear fragments and gamma-rays.  First recognized by the KamLAND experiment for its special importance in organic scintillators, it dominates the DSNB signal by more than one order of magnitude. For detectors featuring delayed neutron-tagging capabilities (like JUNO and to some extent as well SK-Gd), discrimination of this background is the major challenge.
+\end{itemize}
+
+\paragraph{Background discrimination} A WbLS target offers several avenues to suppress the otherwise overwhelming background mimicking the IBD signature:
+\begin{itemize}
+\item {\bf Delayed decays:} The dominant NC reaction partner of atmospheric neutrinos in WbLS are oxygen nuclei. This turns out to be an advantage over organic LS where interactions on carbon predominantly create the long-lived isotope C-11. Contrariwise, the most ample isotope created in WbLS is O-15. It's subsequent $\beta$-decay with an endpoint of 2.5\,MeV and lifetime of 2.2\,min will be well visible in a WbLS detector and allows to remove about half of the NC background events by searching for a three-fold coincidence of prompt, delayed and a late O-15 decay event (see table \ref{fig:dsnb_delayed_tagging} for the relevant branching ratio). While a similar argument can be made for the low-yield B-12, all other isotopes are either stable or decaying too fast for a delayed tag.
+\begin{figure}[htp!]
+\centering
+\includegraphics[width=0.55\textwidth]{dsnb/dsnb_delayed_tagging}
+\caption{Inelastic NC reactions of atmospheric neutrinos on O-16 often remove nucleons so that a fragmented nucleus remains in the final state. In the case of O-15 and B-12, the residual nuclei are unstable, allowing the identification of the NC background by a threefold-coincidence tag including the delayed radioactive decay of the isotope.}
+\label{fig:dsnb_delayed_tagging}
+\end{figure}
+\item {\bf C/S ratio:} The main virtue of WbLS detectors is the application of a cut on the C/S ratio of the photon signal, allowing to discriminate different particle types by their Cherenkov light emission (or its absence). In the present case, positron-like IBDs can be separated from the mixed and largely hadronic prompt events in both atmospheric NC and fast neutron interactions. The left panel of figure~\ref{fig:dsnb_csratio} demonstrates the discrimination power by plotting the C/S ratio of DSNB signal and atmospheric NC background as function of the visible scintillation energy: For visible energies greater than 8\,MeV (1,000\,p.e.), the distributions of both species are clearly separated.
+
+The residual background contamination arises from NC reactions in which gamma-rays are produced as a side-product: they may either originate from nuclear excitations directly induced by the reaction ($E_\gamma\leq20$\,MeV) or are often released in secondary neutron interactions with O-16, featuring a typical energy of $\sim$6\,MeV. The latter create an easy-to-spot curved band in the distribution of atmospheric NC events in figure~\ref{fig:dsnb_csratio}. Due to these events, the discrimination is not perfect but nevertheless provides a potent pool to reduce the spectral contribution of atmospheric NC neutrinos. A corresponding curve evaluating the residual of atmospheric NC events as a function of positron acceptance is depicted in figure~\ref{fig:dsnb_csratio}: For instance, NC backgrounds can be reduced by 95\,\% while maintaining a DSNB signal acceptance of 98\,\%.
+
+\begin{figure}[htp!]
+\centering
+\includegraphics[width=0.6\textwidth]{dsnb/dsnb_cs_ratio}
+\includegraphics[width=0.39\textwidth]{dsnb/dsnb_cs_efficiencies}
+\caption{{\it Left panel:} The Cherenkov-to-scintillation (C/S) ratio offers a powerful tool for the discrimination of the prompt positrons of DSNB events ({\it blue}) and the hadronic prompt events of atmospheric NC reactions ({\it red}) that lead to a significantly reduced emission of Cherenkov photons. Events without Cherenkov emission feature a C/S ratio of 0. However, gamma production by nuclear de-excitation may lead to an increased Cherenkov ratio (curved band) that causes an overlap with the DSNB distribution (inset panel).
+{\it Right panel:} By cutting on the C/S ratio, the spectral contribution of atmospheric NC events can be significantly reduced if a fraction of signal events is rejected simultaneously. The plot shows the reduction factors obtained as a function of the remaining signal efficiency.}
+\label{fig:dsnb_csratio}
+\end{figure}
+
+\item {\bf Multi-ring events:} Finally, the reconstruction of Cherenkov rings from individual final-state particles provides a further handle to discriminate one-ring positron events from multi-ring atmospheric NC events. Figure~\ref{fig:dsnb_multiring_disc} shows the number of Cherenkov rings in NC events as a function of the visible scintillation energy. By limiting the signal acceptance to one-ring events, about 2/3 of the background events can be discriminated without any relevant signal loss. If we assume that the second Cherenkov ring must contain at least 20\,\% of the photons to be discernible from the dominant one, the expected background rejection efficiency is still 60\,\%.
+\begin{figure}[htp!]
+\centering
+\includegraphics[width=0.55\textwidth]{dsnb/dsnb_multiring_disc}
+\caption{Number of Cherenkov rings reconstructed for atmospheric NC events as a function of the prompt visible scintillation energy. The frequent occurrence of two or more rings allows for an efficient discrimination against the single-ring DSNB positrons.}
+\label{fig:dsnb_multiring_disc}
+\end{figure}
+\end{itemize}
+
+\paragraph{THEIA-ii sensitivity.} Based on WbLS, THEIA offers excellent background discrimination capabilities complementary to those of pure Water Cherenkov or Organic Scintillator Detectors. Table \ref{tab:dsnb_rates} illustrates the impact of a sequence of event selection cuts that greatly reduce all backgrounds including the most important one, i.e.~atmospheric neutrino NC interactions. At the same time, the DSNB signal acceptance is hardly affected. WbLS is such arguably the most efficient detector technique conceived up to now for the detection of DSNB neutrinos.
+
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{lccccc}
+\hline
+Spectral contribution			& before cuts & Li veto & delayed decays & C/S cut & single-ring \\
+\hline
+DSNB signal				& 21.1	& 20.9	& 20.9	& 20.5	& 20.5\\
+Reactor neutrinos			& $-$	& $-$ 	& $-$	& $-$	& $-$ \\
+Atmospheric CC			& 2.1		& 2.1		& 2.1		& 2.0		& 2.0 \\
+\hline
+Atmospheric NC			& 436	& 432 	& 230	&11.5	& 6.2 \\
+$\beta n$-emitters ($^9$Li)	& 55.1 	& $-$	& $-$	& $-$	& $-$ \\
+fast neutrons				& 0.65 	& 0.65  	& 0.65	& $-$	& $-$ \\
+\hline
+Signal-to-background		& 0.043	& 0.048	& 0.090	& 1.52 	& 2.50  \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Rates of DSNB signal and backgrounds within the observation window (8-30\,MeV) for a live exposure of 100\,kt$\cdot$years. While the first column represents the rates before cuts, the following columns apply delayed decay, C/S ratio and multiring-event cuts. The cited fast neutron rate assumes a 2.5\,m fiducial volume cut or presence of corresponding active shielding surrounding the target volume.}
+\label{tab:dsnb_rates}
+\end{table}
+
+\noindent A positive detection of the DSNB at a high significance level seems therefore well within reach even of a moderately sized (i.e.~20\,kt fiducial mass) detector. However, it is not immediately clear how much information can be extracted from a spectroscopic measurement on the red-shift dependent SN rate or the average SN neutrino spectrum. This depends not only on THEIA's properties alone but also on the event statistics and performance of SK-Gd and JUNO by the time of running.
+
+ADD here a text on the determination of the ratio of failed SNe
+
+\begin{figure}[htp!]
+\centering
+\includegraphics[width=0.75\textwidth]{dsnb/dsnb_after_cuts}
+\caption{The DSNB and background spectra expected following the application of all cuts lined out in tab.~\ref{tab:dsnb_rates}. While the signal rate is hardly reduced compared to fig.~\ref{fig:dsnb_spectrum}, it is now the dominant contribution in the spectrum.}
+\label{fig:dsnb_spectrum_after_cuts}
+\end{figure}
+
+\paragraph{Detector Requirements}
+As lined out above, the combination of Cherenkov and scintillation photons is a very powerful handle for background discrimination in THEIA. Moreover, it is a piece of complementary information that will not be available in pure water(+Gd) or organic LS detectors, giving the WbLS concept a real edge when addressing detection systematics. Optimum C/S determination power will be obtained when Cherenkov and scintillation light emission are at a similar intensity level. Therefore. an admixture of the organic phase of order 10\,\% to the WbLS will be most favorable for purposes of the DSNB.
+
+Moreover, a $5\sigma$-discovery of the DSNB, and even more so, a first attempt at its spectroscopy will crucially depend on the available statistics. Therefore, it is important to realize a large detector on the scale of 50\,kt target mass or beyond in order to make maximum use of the excellent WbLS detection capabilities.
