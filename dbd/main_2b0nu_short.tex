@@ -36,9 +36,9 @@ techniques.
 
 \subsubsection{Detector Configuration}
 
-For the present studies, we model the detector as a cylinder with a 20\,m fiducial radius and a 40\,m height, for a total fiducial mass of 50\,kt. The detector is assumed to be located in the Homestake mine, at a depth of 4300\,m.w.e. The double-beta decay isotope under investigation is loaded into a nylon balloon of 435\,$\mu$m thickness and 8\,m radius, filled with ultra-pure liquid scintillator (LAB + 2\,g/l PPO for a density of 0.86 g/cm$^3$). The volume outside the balloon is filled with a WbLS (10\% LAB-PPO and 90\% water). We investigate two major loading cases: 3\% enriched Xenon (89.5\% in $^{136}$Xe) and 5\% natural Tellurium (34.1\% in $^{130}$Te).
+For the present studies, we model the detector as a cylinder with a 20\,m fiducial radius and a 40\,m height, for a total fiducial mass of 50\,kt, with a PMT coverage of 90\%. The detector is assumed to be located in the Homestake mine, at a depth of 4300\,m.w.e. The double-beta decay isotope under investigation is loaded into a nylon balloon of 435\,$\mu$m thickness and 8\,m radius, filled with ultra-pure liquid scintillator (LAB + 2\,g/l PPO for a density of 0.86 g/cm$^3$). The volume outside the balloon is filled with a WbLS (10\% LAB-PPO and 90\% water). We investigate two major loading cases: 3\% enriched Xenon (89.5\% in $^{136}$Xe) and 5\% natural Tellurium (34.1\% in $^{130}$Te).
 
-The optical properties of the unloaded LAB+PPO cocktail have been measured by the SNO+ collaboration, while those of the WbLS are obtained by weighting contributions of the LAB+PPO and water, and are consistent with benchtop measurements. As a baseline, an average light yield of 1200 PMT hits per deposited MeV is assumed (corresponding to about 3\%/$\sqrt(E)$ energy resolution). This value includes the reduction in the light yield due to the addition of the isotope, estimated to be around 30\% at 5\%, or higher, loadings. For the specific case of Xe loaded scintillator, the used light yield is likely an underestimation as the KamLAND-Zen experiment predicts a reduction of only 15\% at the reached 3\% loading, corresponding to 1530 Nhits/MeV \cite{KZ-2011}. Figure \ref{fig:scale-ly} shows the impact of the light yield on the THEIA sensitivity.
+The optical properties of the unloaded LAB+PPO cocktail have been measured by the SNO+ collaboration, while those of the WbLS are obtained by weighting contributions of the LAB+PPO and water, and are consistent with benchtop measurements. As a baseline, an average light yield of 1200 PMT hits per deposited MeV is assumed (corresponding to about 3\%/$\sqrt(E)$ energy resolution). This value includes the reduction in the light yield due to the addition of the isotope, estimated to be around 30\% at 5\%, or higher, loadings. For the specific case of Xe loaded scintillator, the used light yield is likely an underestimation as the KamLAND-Zen experiment predicts a reduction of only 15\% at the reached 3\% loading, corresponding to 1530 Nhits/MeV \cite{KZ-2011}. Figure \ref{fig:scale-ly} shows the impact of the light yield on the THEIA sensitivity. 
 Simulations are obtained with the Geant4-based RAT-PAC software package \footnote{\url{https://github.com/rat-pac/rat-pac}}, part of the radioactive decays are simulated using the Decay0 code \cite{decay0}. Reconstructed energy is approximated by assuming the Poisson limit of
 photon counting: the true deposited energy, accounting for quenching, is smeared out by a Gaussian resolution function corresponding to the light
 yield.
@@ -143,10 +143,10 @@ The expected sensitivity (90\% CL sensitivity), using phase space factors from \
 %\label{tab:counts}
 %\end{table}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.35\textwidth}
- \includegraphics[width=\textwidth]{dbd/ly_fc.pdf}
+ \includegraphics[width=\textwidth]{dbd/ly_comparison_lifetime_500.pdf}
  \caption{Light yield}
  \label{fig:scale-ly}
 \end{subfigure}
@@ -165,7 +165,7 @@ The expected sensitivity (90\% CL sensitivity), using phase space factors from \
 % \caption{Reduction factor for $^{214}$Bi}
 % \label{fig:scale-bi214}
 %\end{subfigure}
-\caption{Mass sensitivity as a function of key experimental parameters. The vertical dashed red lines show the values used in the analysis.}
+\caption{Mass sensitivity as a function of key experimental parameters. The vertical dashed red lines show the values used in the analysis. For the same detector optical properties, a variation in the light yield corresponds to a scaling on the PMT coverage.}
 \label{fig:scaling-plots}
 \end{figure}
 
