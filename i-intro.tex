@@ -14,34 +14,99 @@ This paper describes the technical breakthroughs that have led to the developmen
 
 \section{Introduction and THEIA Overview - GDOG, Bob, JRK, Michi}
 
-The \textsc{Theia}  detector~\cite{asdc} leverages a tried and tested methodology in combination with novel, cutting-edge technology.  
-The future of neutrino detection technology lies in massive, high-precision detectors, offering multiple channels for detection.  Current technology is constrained by the choice of target material: water detectors are limited in energy threshold and resolution by the overall light yield of the Cherenkov process, and scintillator detectors are limited in size by optical attenuation in the target itself, and in reconstruction of event direction by the isotropic nature of scintillation light.  
+%The \textsc{Theia}  detector~\cite{asdc} leverages a tried and tested methodology in combination with novel, cutting-edge technology.  
+%The future of neutrino detection technology lies in massive, high-precision detectors, offering multiple channels for detection.  Current technology is constrained by the choice of target material: water detectors are limited in energy threshold and resolution by the overall light yield of the Cherenkov process, and scintillator detectors are limited in size by optical attenuation in the target itself, and in reconstruction of event direction by the isotropic nature of scintillation light.  
+%
+%The newly-developed water-based liquid scintillator (WbLS)~\cite{wbls} offers a unique combination of  high light yield and low-threshold detection with attenuation close to that of pure water, particularly at wavelengths $>$ 400~nm.  
+%Use of this novel target material could allow separation of prompt, directional Cherenkov light from the more abundant, isotropic, delayed scintillation light.  This would be a huge leap forwards in neutrino detection technology, enabling the first low-threshold, directional neutrino detector.  Such a detector could achieve fantastic background rejection using directionality, event topology, and particle ID.  
+%WbLS chemistry also allows loading of metallic ions as an additional target for
+%particle detection, including: $^7$Li for charged-current solar neutrino detection; $^{\rm nat}$Gd
+%for neutron tagging enhancement; 
+%or isotopes that undergo double beta decay, facilitating a
+%neutrinoless double-beta decay (NLDBD) program.  The formula and principle of mass-produced WbLS have been developed and demonstrated at the Brookhaven National Laboratory Liquid Scintillator Development Facility.  Metal-doped samples have been produced with high stability, with loadings of up to several percent.  The instrumentation for large-scale liquid production is currently under design.
+%
+%\textsc{Theia} would combine the use of a 30--100-kton WbLS target, doping with a number of potential isotopes, high efficiency and ultra-fast
+%timing photosensors, and a deep underground location.  A potential site is the Long Baseline Neutrino Facility (LBNF) far site, where \textsc{Theia} could operate in conjunction with the liquid argon tracking detector proposed by DUNE~\cite{dune}.  
+%The basic elements of this detector are being developed now in experiments such as WATCHMAN~\cite{wm}, ANNIE~\cite{annie} and SNO+~\cite{snopl}.  
+%
+%A large-scale WbLS detector such as \textsc{Theia} can achieve an impressively broad program of physics topics, with enhanced sensitivity beyond that of previous detectors.  Much of the program hinges on the capability to separate prompt Cherenkov light from delayed scintillation.  This separation provides many key benefits, including:
+%\begin{itemize}
+%\item The ring-imaging capability of a pure water Cherenkov detector (WCD).  This enables a long-baseline program in a scintillation-based detector, with the additional benefit of low-threshold detection of hadronic events.
+%
+%\item  Direction reconstruction using prompt Cherenkov photons.   This allows statistical identification of events such as solar neutrinos, which offer a rich physics program in their own right, as well as forming a background to many rare-event searches, including NLDBD and nucleon decay.
+%
+%\item Low thresholds and good energy and vertex resolution using the abundant scintillation light.
+%
+%\item Detection of sub-Cherenkov threshold scintillation light.  This provides excellent particle identification, including enhanced neutron tagging, detection of sub-Cherenkov threshold particles such as kaons in nucleon decay searches, and separation of atmospheric neutrino-induced neutral current backgrounds for inverse beta decay searches.
+%
+%\end{itemize}
+%
+%One of the most powerful aspects of \textsc{Theia} is the flexibility:  in the target medium itself, and even in the detector configuration.  The WbLS target can be tuned to meet the most critical physics goals at the time by modifying features of the target cocktail, including: the fraction of water vs scintillator; the choice of wavelength shifters and secondary fluors; and the choice of loaded isotope.  There is also the potential to construct a bag to contain isotope, and perhaps a higher scintillator-fraction target, in the centre of the detector, building on work by KamLAND-Zen~\cite{klz} and Borexino~\cite{bor}.  
 
-The newly-developed water-based liquid scintillator (WbLS)~\cite{wbls} offers a unique combination of  high light yield and low-threshold detection with attenuation close to that of pure water, particularly at wavelengths $>$ 400~nm.  
-Use of this novel target material could allow separation of prompt, directional Cherenkov light from the more abundant, isotropic, delayed scintillation light.  This would be a huge leap forwards in neutrino detection technology, enabling the first low-threshold, directional neutrino detector.  Such a detector could achieve fantastic background rejection using directionality, event topology, and particle ID.  
-WbLS chemistry also allows loading of metallic ions as an additional target for
-particle detection, including: $^7$Li for charged-current solar neutrino detection; $^{\rm nat}$Gd
-for neutron tagging enhancement; 
-or isotopes that undergo double beta decay, facilitating a
-neutrinoless double-beta decay (NLDBD) program.  The formula and principle of mass-produced WbLS have been developed and demonstrated at the Brookhaven National Laboratory Liquid Scintillator Development Facility.  Metal-doped samples have been produced with high stability, with loadings of up to several percent.  The instrumentation for large-scale liquid production is currently under design.
+	Neutrinos constitute nothing, they interact so weakly they are largely
+irrelevant, and they are so light that they are typically ignored.  Yet
+neutrinos access a breadth of science no other fundamental particle can:
+determining neutrino properties themselves and their impact on the weak sector;
+testing fundamental symmetries of Nature; probing near and distant
+astrophysical phenomena; and understanding the earliest moments of the
+Universe.  That scientific breadth has been mirrored by the technologies used
+to study neutrinos, each of which has its own great strength, typically focused
+on a narrow slice of neutrino physics.  We discuss in this white paper a new
+kind of detector, called Theia after the Titaness of light, whose aim is to
+make world-leading measurements over as broad range of neutrino physics and
+astrophysics as possible.
 
-\textsc{Theia} would combine the use of a 30--100-kton WbLS target, doping with a number of potential isotopes, high efficiency and ultra-fast
-timing photosensors, and a deep underground location.  A potential site is the Long Baseline Neutrino Facility (LBNF) far site, where \textsc{Theia} could operate in conjunction with the liquid argon tracking detector proposed by DUNE~\cite{dune}.  
-The basic elements of this detector are being developed now in experiments such as WATCHMAN~\cite{wm}, ANNIE~\cite{annie} and SNO+~\cite{snopl}.  
+	Theia's physics goals include measurement of the solar CNO neutrinos,
+which to date have not been detected exclusively but which would tell us
+important details about how the Sun and planets have evolved~\cite{haxton}.
+Theia will also provide a high-statistics, low-threshold ($\sim$ 3~MeV)
+measurement of the shape of the $^8$B solar neutrinos and thus search for new
+physics in the MSW-vacuum ``transition region.'' Antineutrinos produced in the
+crust and mantle of the Earth will be measured precisely by Theia, as will
+antineutrinos from distant nuclear reactors. Should a supernova occur during
+Theia operations, a high-statistics detection of the $\bar{nu}_e$ flux will be
+made--literally complementary to the  detection of the $\nu_e$s in the DUNE LAr
+detector. The simultaneous detection of both messengers--and any optical, x
+ray, or gamma ray component -- will enable a great wealth of neutrino physics
+and supernova astrophysics. A detection of the diffuse supernova antineutrino
+background is also possible with Theia.  The most ambitious goal,
+which would likely come in a future phase, is a search for neutrinoless double
+beta decay, with a total isotopic mass of 10 tonnes or more, with decay
+lifetime sensitivity in excess of $10^{28}$ years.
 
-A large-scale WbLS detector such as \textsc{Theia} can achieve an impressively broad program of physics topics, with enhanced sensitivity beyond that of previous detectors.  Much of the program hinges on the capability to separate prompt Cherenkov light from delayed scintillation.  This separation provides many key benefits, including:
-\begin{itemize}
-\item The ring-imaging capability of a pure water Cherenkov detector (WCD).  This enables a long-baseline program in a scintillation-based detector, with the additional benefit of low-threshold detection of hadronic events.
+These low-energy physics goals will be achieved even while Theia will make
+measurements of long-baseline neutrino oscillations with high sensitivity to CP
+violation. It will also contribute to atmospheric neutrino measurements and
+searches for nucleon decay, particularly in the $K^+\bar{nu}$ mode.
 
-\item  Direction reconstruction using prompt Cherenkov photons.   This allows statistical identification of events such as solar neutrinos, which offer a rich physics program in their own right, as well as forming a background to many rare-event searches, including NLDBD and nucleon decay.
+Theia is able to achieve this broad range of physics by exploiting new
+technologies to act simultaneously as a (low-energy) scintillation detector and
+a (high-energy) Cherenkov detector. Scintillation light provides the energy
+resolution necessary to get above the majority of radioactive backgrounds and
+provides the ability to see slow-moving recoils; Cherenkov light enables event
+direction reconstruction which provides particle ID at high energies and
+background discrimination at low-energies. The Theia physics program relies on
+our ability to discriminate efficiently and precisely between the ``scintons''
+and ``chertons.'' 
 
-\item Low thresholds and good energy and vertex resolution using the abundant scintillation light.
+Discrimination between chertons and scintons can be achieved in several ways.
+The use of a cocktail like water-based liquid scintillator (WbLS) provides a
+favorable ratio of Cherenkov/scintillation light. With good enough photon
+timing, separation purity can be as high as XXXX~\cite{chess}. Combining angular
+and timing information allows discrimination between Cherenkov and
+scintillation light for high-energy events even in a standard scintillator like
+LAB-PPO~\cite{chess}.  Slowing scintillator emission time down by using slow
+secondary fluors down can also provide excellent separation~\cite{jack}.
+Recent R\&D with dichroic filters to sort photons by wavelength has shown
+separation of long-wavelength chertons from the typically shorter-wavelength
+scintons even in LAB-PPO, with only small reductions in the total scintillation
+light~\cite{dichoicjinst}.  In principle, all of these techniques could be
+deployed together if needed to achieve the full Theia physics program.  New
+reconstruction techniques, to leverage the multi-component light detection, are
+being developed and with the fast timing of newly available PMTs and the
+ultrafast timing of the LAPPDs, allow effective tracking for high-energy
+events and excellent background rejection at low energies.
 
-\item Detection of sub-Cherenkov threshold scintillation light.  This provides excellent particle identification, including enhanced neutron tagging, detection of sub-Cherenkov threshold particles such as kaons in nucleon decay searches, and separation of atmospheric neutrino-induced neutral current backgrounds for inverse beta decay searches.
-
-\end{itemize}
-
-One of the most powerful aspects of \textsc{Theia} is the flexibility:  in the target medium itself, and even in the detector configuration.  The WbLS target can be tuned to meet the most critical physics goals at the time by modifying features of the target cocktail, including: the fraction of water vs scintillator; the choice of wavelength shifters and secondary fluors; and the choice of loaded isotope.  There is also the potential to construct a bag to contain isotope, and perhaps a higher scintillator-fraction target, in the centre of the detector, building on work by KamLAND-Zen~\cite{klz} and Borexino~\cite{bor}.  
 
 
 \subsection{Detector configuration}
