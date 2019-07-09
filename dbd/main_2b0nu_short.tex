@@ -36,9 +36,9 @@ techniques.
 
 \subsubsection{Detector Configuration}
 
-For the present studies, we model the detector as a cylinder with a 20\,m fiducial radius and a 40\,m height, for a total fiducial mass of 50\,kt. The detector is assumed to be located in the Homestake mine, at a depth of 4300\,m.w.e. The double-beta decay isotope under investigation is loaded into a nylon balloon of 435\,$\mu$m thickness and 8\,m radius, filled with ultra-pure liquid scintillator (LAB + 2\,g/l PPO for a density of 0.86 g/cm$^3$). The volume outside the balloon is filled with a WbLS (10\% LAB-PPO and 90\% water). We investigate two major loading cases: 3\% enriched Xenon (89.5\% in $^{136}$Xe) and 5\% natural Tellurium (34.1\% in $^{130}$Te).
+For the present studies, we model the detector as a cylinder with a 20\,m fiducial radius and a 40\,m height, for a total fiducial mass of 50\,kt, with a PMT coverage of 90\%. The detector is assumed to be located in the Homestake mine, at a depth of 4300\,m.w.e. The double-beta decay isotope under investigation is loaded into a nylon balloon of 435\,$\mu$m thickness and 8\,m radius, filled with ultra-pure liquid scintillator (LAB + 2\,g/l PPO for a density of 0.86 g/cm$^3$). The volume outside the balloon is filled with a WbLS (10\% LAB-PPO and 90\% water). We investigate two major loading cases: 3\% enriched Xenon (89.5\% in $^{136}$Xe) and 5\% natural Tellurium (34.1\% in $^{130}$Te).
 
-The optical properties of the unloaded LAB+PPO cocktail have been measured by the SNO+ collaboration, while those of the WbLS are obtained by weighting contributions of the LAB+PPO and water, and are consistent with benchtop measurements. As a baseline, an average light yield of 1200 PMT hits per deposited MeV is assumed (corresponding to about 3\%/$\sqrt(E)$ energy resolution). This value includes the reduction in the light yield due to the addition of the isotope, estimated to be around 30\% at 5\%, or higher, loadings. For the specific case of Xe loaded scintillator, the used light yield is likely an underestimation as the KamLAND-Zen experiment predicts a reduction of only 15\% at the reached 3\% loading, corresponding to 1530 Nhits/MeV \cite{KZ-2011}. Figure \ref{fig:scale-ly} shows the impact of the light yield on the THEIA sensitivity.
+The optical properties of the unloaded LAB+PPO cocktail have been measured by the SNO+ collaboration, while those of the WbLS are obtained by weighting contributions of the LAB+PPO and water, and are consistent with benchtop measurements. As a baseline, an average light yield of 1200 PMT hits per deposited MeV is assumed (corresponding to about 3\%/$\sqrt(E)$ energy resolution). This value includes the reduction in the light yield due to the addition of the isotope, estimated to be around 30\% at 5\%, or higher, loadings. For the specific case of Xe loaded scintillator, the used light yield is likely an underestimation as the KamLAND-Zen experiment predicts a reduction of only 15\% at the reached 3\% loading, corresponding to 1530 Nhits/MeV \cite{KZ-2011}. Figure \ref{fig:scale-ly} shows the impact of the light yield on the THEIA sensitivity. 
 Simulations are obtained with the Geant4-based RAT-PAC software package \footnote{\url{https://github.com/rat-pac/rat-pac}}, part of the radioactive decays are simulated using the Decay0 code \cite{decay0}. Reconstructed energy is approximated by assuming the Poisson limit of
 photon counting: the true deposited energy, accounting for quenching, is smeared out by a Gaussian resolution function corresponding to the light
 yield.
@@ -79,8 +79,8 @@ The main sources of background included in the this analysis are summarized in T
 \begin{description}
 \item[Double Beta Decay] This irreducible background is due to the $2\nu\beta\beta$ decays of $^{130}$Te or $^{136}$Xe. Due to the steeply-falling
 spectrum, the number of events falling in the ROI depends strongly on the energy resolution.
-\item[Cosmogenic Production] These backgrounds are due to activation of nuclei by muons (during data taking) or protons and neutrons (during material production and handling at Earth's surface). The neutron and proton production's rates in Xe and Te has been investigated by several authors \cite{mei09, baudis15, zhang16, norm05, bard97, wang15, lozza15}. Among the most important nuclides there are $^{60}$Co ($Q=2.8$ MeV, $T_{1/2}=5.27$ y) and $^{110m}$Ag ($Q=3.1$ MeV, $T_{1/2}=250$ d). Mitigation of these background sources requires minimal exposure at sea level, a deep underground cool-down period, chemical purification processes \cite{snop16}, and, to limit the in-situ production during data taking, the use of a water shield. In these studies, it is assumed that proper measures are taken to handle the target material, reducing the background to a negligible level. For what concerns the in-situ muon induced background, the most dangerous nuclide for the NLDBD study is $^{10}$C ($Q=3.65$ MeV, $T_{1/2}=19.3$ s) produced by muon interaction with the carbon atoms of the liquid scintillator. The estimated event's rate is about 300 events/kt/yr \cite{hagn00} for a muon flux of $4.2\times10^{-9}$ cm$^{-2}$ s$^{-1}$ and an average muon energy of 293\,GeV \cite{mei06}. A reduction of 92.5\% of the $^{10}$C background has been demostrated by Borexino \cite{bxo2013}, using a three-fold coincidence technique\cite{galb05, gando16}.
-\item[Solar Neutrinos] $^{8}$B solar neutrino elastic scattering in the target material results in a background that is approximately flat across the NLDBD energy region of interest. These events can potentially be reduced using Cherenkov light to determine the direction with respect to the Sun and, possibly, separate one- and two-ring topologies, on a statistical basis, if not event-by-event. Figure \ref{fig:scale-b8} shows the sensitivity scaling with solar neutrino event's reduction.
+\item[Cosmogenic Production] These backgrounds are due to activation of nuclei by muons (during data taking) or protons and neutrons (during material production and handling at Earth's surface). The neutron and proton production's rates in Xe and Te has been investigated by several authors \cite{mei09, baudis15, zhang16, norm05, bard97, wang15, lozza15}. Among the most important nuclides there are $^{60}$Co ($Q=2.8$ MeV, $T_{1/2}=5.27$ y) and $^{110m}$Ag ($Q=3.1$ MeV, $T_{1/2}=250$ d). Mitigation of these background sources requires minimal exposure at sea level, a deep underground cool-down period, chemical purification processes \cite{snop16}, and, to limit the in-situ production during data taking, the use of a water shield. In these studies, it is assumed that proper measures are taken to handle the target material, reducing the background to a negligible level. For what concerns the in-situ muon induced background, the most dangerous nuclide for the NLDBD study is $^{10}$C ($Q=3.65$ MeV, $T_{1/2}=19.3$ s) produced by muon interaction with the carbon atoms of the liquid scintillator. The estimated event's rate is about 300 events/kt/yr \cite{hagn00} for a muon flux of $4.2\times10^{-9}$ cm$^{-2}$ s$^{-1}$ and an average muon energy of 293\,GeV \cite{mei06}. A reduction of 92.5\% of the $^{10}$C background has been demostrated by Borexino \cite{bxo2013}, using a three-fold coincidence technique\cite{galb05, gando16}. An alternative approach could be using machine learning, as described in the reconstruction section. However, a rejection of at least 90\% is required in order to maintain a sensitivity down to the normal hierarchy.
+\item[Solar Neutrinos] $^{8}$B solar neutrino elastic scattering in the target material results in a background that is approximately flat across the NLDBD energy region of interest. Figure \ref{fig:scale-b8} shows the sensitivity scaling with solar neutrino event's reduction. A rejection of at least 50\% is requested in order to reach the sensitivity goal. MonteCarlo simulations show that, for 2.5\,MeV electrons in water, about 80\% of the $^{8}$B events can be rejecting keeping a 75\% acceptance for the neutrinoless double-beta decay signal (assumed to be isotropic). The use of high quantum efficiency PMTs, together with a large coverage, is expected to improve this value. On the other hand, the scintillation light is a confounding factor (in slow scintillator it might be harder to reach the purity requirements), which might reduce the discrimination. Nevertheless, a 50\% rejection is considered an achievable value. This is further shown in \cite{elagin19}, where more than 50\% rejection in $^{8}$B is achieved, retaining more than 70\% of the signal.
 Another background induced by solar neutrinos (mainly $^{8}$B and $^{7}$Be) are high Q-value nuclides produced by charged current interaction with $^{130}$Te and $^{136}$Xe \cite{eijiri14, eijiri17}. Due to their long half life, a tagging technique based on a delayed coincidence is expected to have a small efficiency. 
 \item[Internal Contamination:] $^{214}$Bi ($Q=3.27$ MeV, U-chain) and $^{208}$Tl ($Q=5$ MeV, Th-chain) decays can fall in the energy window used for the NLDBD studies. The targeted scintillator cocktail purity for the \textsc{Theia} experiment is 10$^{-17}$ g/g in both U and Th. Liquid scintillator purities better than $\times$ 10$^{-18}$ g/g in U and Th have been obtained in the Phase-II of Borexino \cite{bxo16}, while KamLAND-Zen, has reached a cleanliness of the order of $\times$ 10$^{-16}$ g/g U for the 3\% loaded case \cite{gando13}. The targeted purity is considered achievable by improving the target material purification technique, i.e the purity grade of the chemicals used to process the tellurium. In addition delayed coincidence techniques can further reduce the number of $^{214}$Bi decays falling in the ROI. A rejection better than 99.95\% for the $^{214}$BiPo in the ROI has been shown by the KamLAND-Zen experiment \cite{KD-Zen}, while Monte Carlo studies for the SNO+ experiment show that the rejection in the double-beta decay region can be as high as 99.99\% \cite{snop16}. For the aimed target purity, it is required that the $^{214}$Bi is further reduced by 99.9\%. Larger reduction factors have a minimum effect on the overall sensitivity.
 \item[External Sources:] Decays from U and Th-chain impurities present in the balloon material, the external water-based liquid scintillator, the
@@ -114,6 +114,7 @@ The expected sensitivity (90\% CL sensitivity), using phase space factors from \
   m_{\beta\beta} < 4.8~\mathrm{meV}
 \end{eqnarray*}
 
+It should be noted that for the case of Xenon, the use of a more realistic light yield of about 1500\,nhits/MeV, as obtained from  \cite{KZ-2011}, would increase the half-life limit to 3$\times 10^{28}$ years, corresponding to a $m_{\beta\beta} < 4.6~\mathrm{meV}$. Unfortunately, the required mass of Xe to reach the normal hierarchy is about 10 times the world annual production, which makes the use of Xe likely impractical.
 
 %\begin{table}
 %\centering
@@ -146,7 +147,7 @@ The expected sensitivity (90\% CL sensitivity), using phase space factors from \
 \begin{figure}[!h]
 \centering
 \begin{subfigure}[b]{0.35\textwidth}
- \includegraphics[width=\textwidth]{dbd/ly_fc.pdf}
+ \includegraphics[width=\textwidth]{dbd/ly_comparison_lifetime_500.pdf}
  \caption{Light yield}
  \label{fig:scale-ly}
 \end{subfigure}
@@ -165,7 +166,7 @@ The expected sensitivity (90\% CL sensitivity), using phase space factors from \
 % \caption{Reduction factor for $^{214}$Bi}
 % \label{fig:scale-bi214}
 %\end{subfigure}
-\caption{Mass sensitivity as a function of key experimental parameters. The vertical dashed red lines show the values used in the analysis.}
+\caption{Mass sensitivity as a function of key experimental parameters. The vertical dashed red lines show the values used in the analysis. For the same detector optical properties, a variation in the light yield corresponds to a scaling on the PMT coverage.}
 \label{fig:scaling-plots}
 \end{figure}
 
@@ -190,42 +191,41 @@ The expected sensitivity (90\% CL sensitivity), using phase space factors from \
 
 \subsubsection{Alternative Isotopes}
 
-Few alternative isotopes have been explored, which would be favorable in terms of annual abundance and costs: $^{100}$Mo, $^{82}$Se and $^{150}$Nd. A summary of the expected events in the NLDBD ROI and the corresponding limits on the half-life, and Majorana mass, is given in Table \ref{table::dbd::alternatives}. The selected loading of 2\% for Se and Nd is based on results of stability tests in table-top experiments. For Mo a loading up to 3\% seems to maintain good stability and optical properties. In case of Nd an enrichment factor of 90\% is considered, while the enrichment option for Mo and Se is considered less promising due to the smaller G$_{0\nu} M^{2}_{0\nu}$ value. The scintillator purity is kept at 10$^{-17}$g/g for both U and Th for all the mixtures, unless otherwise noted.
+Few alternative isotopes have been explored, which would be favorable in terms of annual abundance and costs: $^{100}$Mo, $^{82}$Se and $^{150}$Nd. For all these isotopes the main limiting factor is the leakage of the 2$\nu\beta\beta$ in the signal ROI, which highly increased due to the shorter half-life of the corresponding decay mode. A loading of 2\% for Se and Nd has been chosen based on results of stability tests in table-top experiments. For Mo a loading up to 3\% seems to maintain good stability and optical properties. In case of Nd and Mo an enrichment factor of 90\% is considered, while the enrichment option for Se is considered less promising due to the smaller G$_{0\nu} M^{2}_{0\nu}$ value, and the larger costs (although a larger world annual abundance than Xe is available). The scintillator purity is kept at 10$^{-17}$g/g for both U and Th for all the mixtures.\\ 
+For a 90\% enriched $^{150}$Nd, the expected limit on the half-life is 5.1$\times 10^{27}$ years, with a limit on the effective Majorana neutrino mass (IBM-2) is 7.6\,meV. Similar values are obtained with a 3\%, 90\% enriched, $^{100}$Mo loading (T$_{1/2}$ = 9.5$\times 10^{27}$ and $m_{\beta\beta}$ = 7\,meV).
 
-Among the alternatives explored, the 2\% enriched Nd cocktail is the only option providing a competitive limit on the effective Majorana neutrino mass, approaching the limit obtained with a 5\% Te loaded scintillator for high light yield.
-
-\begin{table}
-\centering
-\scalebox{0.9}{
-\begin{tabular}{cccc}
-\toprule
-                          & \multicolumn{3}{c}{\bf Events/ROI$\cdot$10 y} \\
-{\bf Signal}              & $^{nat}$Se  & $^{nat}$Mo   & $^{enr}$Nd \\
-\midrule
-Loading fraction (\%) & 2 & 3 & 2 \\
-Isotope fraction (\%) & 8.73 & 9.82 & 90 \\
-Loaded isotope mass [t] & 3.2 & 5.4 & 33.2 \\
+%\begin{table}
+%\centering
+%\scalebox{0.9}{
+%\begin{tabular}{cccc}
+%\toprule
+%                          & \multicolumn{3}{c}{\bf Events/ROI$\cdot$10 y} \\
+%{\bf Signal}              & $^{nat}$Se  & $^{nat}$Mo   & $^{enr}$Nd \\
+%\midrule
+%Loading fraction (\%) & 2 & 3 & 2 \\
+%Isotope fraction (\%) & 8.73 & 9.82 & 90 \\
+%Loaded isotope mass [t] & 3.2 & 5.4 & 33.2 \\
 %$0\nu\beta\beta$ (10 meV) & 21.4       & 21.7 & 31.4      \\
-\midrule
-$2\nu\beta\beta$          & 117.3 &  325.6  & 2042     \\
-$^8$B Solar ES  (50\%)           & 136.2     & 135.6 & 132.9      \\
-$^{10}$C  (92.5\%)                & 9.91       & 8.49 & 0.28       \\
-$^{100}$Tc \cite{eijiri14, eijiri17}                 & ---       & 0.34 & ---        \\
-$^{82}$Br \cite{eijiri14, eijiri17}               & 0.21        & --- & ---        \\
-$^{150}$Pm \cite{eijiri14, eijiri17}               & ---        & --- & 0.145       \\
-$^{208}$Tl                & 158.4       & 198.7 & 563.4      \\
-$^{214}$Bi  (99.9\%)               & 0.18        & 0.09 & --- (*)        \\
-Balloon $^{214}$Bi  (50\%)       & 3.8       & 3.0 & 0.2       \\
-Balloon $^{208}$Tl  (50\%)      & 31.7       & 31.0 & 50.5       \\
-\midrule
-{\bf Total}               & 457.8      & 702.8 & 2789.9      \\ \hline \hline
-Expected T$_{1/2}$ ($\times10^{27}$ yr) & 2.2 & 2.4 & 5.1 \\
-Expected mass (meV) & 15.5 & 13.8 & 7.6 \\ \hline
-\bottomrule
-\end{tabular}}
-\caption{Expected background counts in 10 years of data taking in the ROI. In parenthesis is shown the reduction factor applied. (*) Assumed 10$^{-16}$ g/g in U. Limits on the effect Majorana neutrino mass are obtained for 90\% C.L. (FC approach) with phase space factors from \cite{2012PhRvC..85c4316K} and matrix elements from \cite{Barea:2013wb} (g$_{A}$=1.269).}
-\label{table::dbd::alternatives}
-\end{table}
+%\midrule
+%$2\nu\beta\beta$          & 117.3 &  325.6  & 2042     \\
+%$^8$B Solar ES  (50\%)           & 136.2     & 135.6 & 132.9      \\
+%$^{10}$C  (92.5\%)                & 9.91       & 8.49 & 0.28       \\
+%$^{100}$Tc \cite{eijiri14, eijiri17}                 & ---       & 0.34 & ---        \\
+%$^{82}$Br \cite{eijiri14, eijiri17}               & 0.21        & --- & ---        \\
+%$^{150}$Pm \cite{eijiri14, eijiri17}               & ---        & --- & 0.145       \\
+%$^{208}$Tl                & 158.4       & 198.7 & 563.4      \\
+%$^{214}$Bi  (99.9\%)               & 0.18        & 0.09 & --- (*)        \\
+%Balloon $^{214}$Bi  (50\%)       & 3.8       & 3.0 & 0.2       \\
+%Balloon $^{208}$Tl  (50\%)      & 31.7       & 31.0 & 50.5       \\
+%\midrule
+%{\bf Total}               & 457.8      & 702.8 & 2789.9      \\ \hline \hline
+%Expected T$_{1/2}$ ($\times10^{27}$ yr) & 2.2 & 2.4 & 5.1 \\
+%Expected mass (meV) & 15.5 & 13.8 & 7.6 \\ \hline
+%\bottomrule
+%\end{tabular}}
+%\caption{Expected background counts in 10 years of data taking in the ROI. In parenthesis is shown the reduction factor applied. (*) Assumed 10$^{-16}$ g/g in U. Limits on the effect Majorana neutrino mass are obtained for 90\% C.L. (FC approach) with phase space factors from \cite{2012PhRvC..85c4316K} and matrix elements from \cite{Barea:2013wb} (g$_{A}$=1.269).}
+%\label{table::dbd::alternatives}
+%\end{table}
 
 %\begin{figure}
 %\includegraphics[scale=0.6]{dbd/ly_comparison_mass.pdf} 
